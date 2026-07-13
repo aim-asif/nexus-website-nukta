@@ -3,24 +3,41 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Nexus brand — green from nexus_logo.svg */
+  --brand: #81f300;
+  --brand-dark: #6cc900;
+  --dark: #0a0a0a; /* navbar / dark sections */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-dark: var(--dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Site-wide content container — near full width */
+@utility container-site {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1800px;
+  padding-inline: 1.5rem;
+
+  @media (width >= 640px) {
+    padding-inline: 3rem;
+  }
+
+  @media (width >= 1024px) {
+    padding-inline: 9rem;
+  }
 }
