@@ -53,7 +53,7 @@ const stats = [
 
 export default function StatsBar() {
   return (
-    <section className="border-y border-white/10 bg-dark text-white">
+    <section className="relative border-y border-white/10 bg-dark/40 text-white backdrop-blur-md">
       <div className="container-site py-10">
         <ul className="grid grid-cols-2 gap-y-10 lg:grid-cols-4 lg:divide-x lg:divide-white/10">
           {stats.map((stat) => (

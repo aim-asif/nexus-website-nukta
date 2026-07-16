@@ -1,4 +1,5 @@
 import Link from "next/link";
+import StatsBar from "./StatsBar";
 
 const checklist = [
   "Dedicated account manager",
@@ -30,11 +31,11 @@ export default function ForLettingAgents() {
     <section className="relative overflow-hidden bg-dark text-white">
       {/* Image */}
       <div
-        className="absolute inset-y-0 right-0 hidden w-1/2 bg-neutral-900 bg-[url('/images/letting_agents.jpg')] bg-cover bg-center lg:block"
+        className="absolute inset-y-0 right-0 hidden w-1/2 bg-neutral-900 bg-[url('/images/let-agent-section.png')] bg-cover bg-center lg:block"
         aria-hidden="true"
       />
       <div
-        className="absolute inset-y-0 right-0 hidden w-1/2 bg-gradient-to-r from-dark via-dark/40 to-transparent lg:block"
+        className="absolute inset-y-0 right-0 hidden w-1/2 bg-linear-to-r from-dark via-dark/40 to-transparent lg:block"
         aria-hidden="true"
       />
 
@@ -66,7 +67,7 @@ export default function ForLettingAgents() {
 
           <Link
             href="/for-letting-agents"
-            className="mt-9 inline-flex items-center justify-center gap-3 rounded-lg bg-brand px-7 py-4 font-bold text-black transition-colors hover:bg-brand-dark"
+            className="mt-9 inline-flex w-full items-center justify-center gap-3 rounded-lg bg-brand px-7 py-4 font-bold text-black transition-colors hover:bg-brand-dark sm:w-auto"
           >
             Learn more
             <svg
@@ -83,7 +84,15 @@ export default function ForLettingAgents() {
             </svg>
           </Link>
         </div>
+
+        {/* Mobile image — the desktop version sits absolutely on the right half */}
+        <div className="relative mt-12 -mx-6 sm:-mx-12 lg:hidden" aria-hidden="true">
+          <div className="h-72 bg-[url('/images/let-agent-section.png')] bg-cover bg-center sm:h-96" />
+          <div className="absolute inset-0 bg-linear-to-b from-dark via-transparent to-dark" />
+        </div>
       </div>
+
+      <StatsBar />
     </section>
   );
 }

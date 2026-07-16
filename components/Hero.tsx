@@ -32,14 +32,14 @@ function ClockIcon() {
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-dark text-white">
-      {/* Hero image */}
+      {/* Hero image — full-bleed and dimmed on mobile, right 3/5 at full strength on md+ */}
       <div
-        className="absolute inset-y-0 right-0 hidden w-3/5 bg-neutral-900 bg-[url('/images/hero_img.jpg')] bg-cover bg-center md:block"
+        className="absolute inset-0 bg-neutral-900 bg-[url('/images/hero_img.jpg')] bg-cover bg-center opacity-20 md:left-auto md:w-3/5 md:opacity-100"
         aria-hidden="true"
       />
       {/* Fade the image into the dark left side */}
       <div
-        className="absolute inset-y-0 right-0 hidden w-3/5 bg-gradient-to-r from-dark via-dark/40 to-transparent md:block"
+        className="absolute inset-y-0 right-0 hidden w-3/5 bg-linear-to-r from-dark via-dark/40 to-transparent md:block"
         aria-hidden="true"
       />
 
@@ -47,7 +47,7 @@ export default function Hero() {
         <div className="max-w-xl">
 
 
-          <h1 className="mt-5 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="mt-5 text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
             Property maintenance,{" "}
             <span className="text-brand">done properly.</span>
           </h1>

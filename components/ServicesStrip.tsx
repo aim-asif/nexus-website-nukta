@@ -105,6 +105,31 @@ const services: Service[] = [
   },
 ];
 
+function ViewAllLink({ className = "" }: { className?: string }) {
+  return (
+    <Link
+      href="/services"
+      className={`group inline-flex items-center gap-2 font-medium text-white transition-colors hover:text-brand ${className}`}
+    >
+      <span className="underline decoration-brand underline-offset-8">
+        View all services
+      </span>
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="h-5 w-5 text-brand transition-transform group-hover:translate-x-1"
+        aria-hidden="true"
+      >
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </svg>
+    </Link>
+  );
+}
+
 export default function ServicesStrip() {
   return (
     <section className="border-y border-white/10 bg-dark text-white">
@@ -118,26 +143,7 @@ export default function ServicesStrip() {
               Every trade. One standard.
             </h2>
           </div>
-          <Link
-            href="/services"
-            className="group inline-flex items-center gap-2 font-medium text-white transition-colors hover:text-brand"
-          >
-            <span className="underline decoration-brand underline-offset-8">
-              View all services
-            </span>
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-5 w-5 text-brand transition-transform group-hover:translate-x-1"
-              aria-hidden="true"
-            >
-              <path d="M5 12h14M13 6l6 6-6 6" />
-            </svg>
-          </Link>
+          <ViewAllLink className="hidden md:inline-flex" />
         </div>
 
         <ul className="mt-12 grid grid-cols-2 gap-y-10 md:grid-cols-4 xl:grid-cols-8 xl:divide-x xl:divide-white/10">
@@ -154,6 +160,10 @@ export default function ServicesStrip() {
             </li>
           ))}
         </ul>
+
+        <div className="mt-12 flex justify-center md:hidden">
+          <ViewAllLink />
+        </div>
       </div>
     </section>
   );

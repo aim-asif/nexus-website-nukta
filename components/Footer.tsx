@@ -39,7 +39,7 @@ const footerColumns = [
 
 function PhoneIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-brand" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 shrink-0 text-brand" aria-hidden="true">
       <path d="M6.6 10.8c1.4 2.7 3.6 4.9 6.3 6.3l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8z" />
     </svg>
   );
@@ -47,41 +47,50 @@ function PhoneIcon() {
 
 function MailIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5 text-brand" aria-hidden="true">
-      <rect x="3" y="5" width="18" height="14" rx="2" />
-      <path d="m4 7 8 6 8-6" strokeLinecap="round" strokeLinejoin="round" />
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 shrink-0 text-brand" aria-hidden="true">
+      <path d="M20 5H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-.4 3.25-6.94 5.2a1.1 1.1 0 0 1-1.32 0L4.4 8.25a.75.75 0 1 1 .9-1.2L12 12.06l6.7-5.01a.75.75 0 1 1 .9 1.2z" />
     </svg>
   );
 }
 
 function PinIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5 text-brand" aria-hidden="true">
-      <path d="M12 21s7-6.4 7-11.5A7 7 0 0 0 5 9.5C5 14.6 12 21 12 21z" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="12" cy="9.5" r="2.5" />
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 shrink-0 text-brand" aria-hidden="true">
+      <path d="M12 2a7.5 7.5 0 0 0-7.5 7.5C4.5 15.14 12 22 12 22s7.5-6.86 7.5-12.5A7.5 7.5 0 0 0 12 2zm0 10.25a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5z" />
     </svg>
   );
 }
 
 function FacebookIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden="true">
-      <path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1z" />
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-9 w-9" aria-hidden="true">
+      <path d="M12 1.5C6.2 1.5 1.5 6.2 1.5 12c0 5.24 3.84 9.58 8.86 10.37v-7.34H7.7V12h2.66V9.69c0-2.63 1.57-4.08 3.96-4.08 1.15 0 2.35.2 2.35.2v2.58h-1.32c-1.3 0-1.71.81-1.71 1.64V12h2.91l-.47 3.03h-2.44v7.34c5.02-.79 8.86-5.13 8.86-10.37 0-5.8-4.7-10.5-10.5-10.5z" />
     </svg>
   );
 }
 
 function LinkedInIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden="true">
-      <path d="M4.5 3.5A1.75 1.75 0 1 0 4.5 7a1.75 1.75 0 0 0 0-3.5zM3 8.75h3V21H3zM9 8.75h2.88v1.66h.04c.4-.76 1.38-1.56 2.85-1.56 3.05 0 3.61 2 3.61 4.6V21h-3v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21H9z" />
+    <svg viewBox="0 0 24 24" className="h-9 w-9" aria-hidden="true">
+      <circle cx="12" cy="12" r="10.5" fill="currentColor" />
+      <path
+        fill="var(--dark)"
+        d="M8.4 9.6H6.2v7.2h2.2V9.6zM7.3 8.6a1.3 1.3 0 1 0 0-2.6 1.3 1.3 0 0 0 0 2.6zM12.1 9.6H10v7.2h2.15v-3.78c0-.95.4-1.72 1.4-1.72.94 0 1.15.8 1.15 1.78v3.72h2.15v-4.1c0-2.02-.86-3.28-2.6-3.28-1.05 0-1.75.5-2.1 1.16h-.05V9.6z"
+      />
     </svg>
   );
 }
 
 function InstagramIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5" aria-hidden="true">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      className="h-9 w-9 p-1"
+      aria-hidden="true"
+    >
       <rect x="3" y="3" width="18" height="18" rx="5" />
       <circle cx="12" cy="12" r="4" />
       <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
@@ -93,30 +102,29 @@ export default function Footer() {
   return (
     <footer className="bg-dark text-white">
       <div className="relative overflow-hidden">
-        {/* Van image — bottom right, desktop only */}
         <div
-          className="absolute bottom-0 right-0 hidden h-64 w-md bg-neutral-900 bg-[url('/images/footer_van.jpg')] bg-contain bg-bottom bg-no-repeat lg:block"
+          className="pointer-events-none absolute inset-y-0 right-0 hidden w-[30%] max-w-2xl bg-[url('/images/footer-van-img.png')] bg-contain bg-right bg-no-repeat xl:block"
           aria-hidden="true"
         />
 
-        <div className="container-site relative grid grid-cols-1 gap-12 py-16 sm:grid-cols-2 lg:grid-cols-5">
-          <div className="sm:col-span-2 lg:col-span-2">
-            <Image src="/nexus_logo.svg" alt="Nexus" width={130} height={38} />
-            <p className="mt-1 text-[0.6rem] font-light uppercase tracking-[0.32em] text-neutral-200">
+        <div className="container-site relative grid grid-cols-2 gap-x-6 gap-y-12 py-16 sm:gap-12 lg:grid-cols-6 xl:w-[74%] xl:pr-8" style={{ marginInline: "unset" }}>
+          <div className="col-span-2">
+            <Image src="/nexus_logo.svg" alt="Nexus" width={150} height={44} />
+            <p className="mt-2 text-[0.65rem] font-light uppercase tracking-[0.32em] text-neutral-200">
               Property Maintenance
             </p>
-            <p className="mt-5 max-w-xs text-sm leading-relaxed text-neutral-400">
+            <p className="mt-6 max-w-xs text-[15px] leading-relaxed text-neutral-200">
               Property maintenance, repairs and improvements for letting
               agents across Gloucestershire.
             </p>
-            <div className="mt-6 flex items-center gap-4">
-              <Link href="#" aria-label="Facebook" className="text-neutral-400 transition-colors hover:text-brand">
+            <div className="mt-8 flex items-center gap-6 text-brand">
+              <Link href="#" aria-label="Facebook" className="transition-opacity hover:opacity-80">
                 <FacebookIcon />
               </Link>
-              <Link href="#" aria-label="LinkedIn" className="text-neutral-400 transition-colors hover:text-brand">
+              <Link href="#" aria-label="LinkedIn" className="transition-opacity hover:opacity-80">
                 <LinkedInIcon />
               </Link>
-              <Link href="#" aria-label="Instagram" className="text-neutral-400 transition-colors hover:text-brand">
+              <Link href="#" aria-label="Instagram" className="transition-opacity hover:opacity-80">
                 <InstagramIcon />
               </Link>
             </div>
@@ -125,12 +133,12 @@ export default function Footer() {
           {footerColumns.map((column) => (
             <div key={column.heading}>
               <h3 className="font-bold text-white">{column.heading}</h3>
-              <ul className="mt-4 space-y-3">
+              <ul className="mt-5 space-y-3.5">
                 {column.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-neutral-400 transition-colors hover:text-brand"
+                      className="text-[15px] text-neutral-300 transition-colors hover:text-brand"
                     >
                       {link.label}
                     </Link>
@@ -142,22 +150,26 @@ export default function Footer() {
 
           <div>
             <h3 className="font-bold text-white">Get in touch</h3>
-            <ul className="mt-4 space-y-4 text-sm text-neutral-400">
-              <li className="flex items-center gap-3">
+            <ul className="mt-5 space-y-6 text-[15px] text-neutral-200">
+              <li className="flex items-center gap-4">
                 <PhoneIcon />
                 <a href="tel:01242903123" className="transition-colors hover:text-brand">
                   01242 903 123
                 </a>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center gap-4">
                 <MailIcon />
-                <a href="mailto:hello@nexuspm.co.uk" className="transition-colors hover:text-brand">
+                <a href="mailto:hello@nexuspm.co.uk" className="break-all transition-colors hover:text-brand">
                   hello@nexuspm.co.uk
                 </a>
               </li>
-              <li className="flex items-start gap-3">
+              <li className="flex items-start gap-4">
                 <PinIcon />
-                <span>Gloucestershire &amp; surrounding areas</span>
+                <span>
+                  Gloucestershire
+                  <br />
+                  &amp; surrounding areas
+                </span>
               </li>
             </ul>
           </div>
@@ -165,12 +177,12 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-site flex flex-col items-center justify-between gap-2 py-6 text-sm text-neutral-400 sm:flex-row">
+        <div className="container-site flex flex-col items-center justify-between gap-3 py-6 text-center text-sm text-neutral-300 sm:flex-row sm:text-left">
           <p>
             &copy; {new Date().getFullYear()} Nexus Property Maintenance Ltd.
             All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-10">
             <Link href="/privacy-policy" className="transition-colors hover:text-brand">
               Privacy Policy
             </Link>
