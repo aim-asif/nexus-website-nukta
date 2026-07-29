@@ -3,9 +3,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
+import {
+  ServicesMobileSection,
+  ServicesNavItem,
+  ServicesPopover,
+} from "./ServicesMenu";
 
 const navLinks = [
-  { label: "Services", href: "/services" },
   { label: "For Letting Agents", href: "/for-letting-agents" },
   { label: "About Us", href: "/about" },
   { label: "Our Work", href: "/our-work" },
@@ -15,14 +19,22 @@ const navLinks = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <header className="bg-dark text-white">
+    <header
+      className="relative z-50 bg-dark text-white"
+      onMouseLeave={() => setServicesOpen(false)}
+    >
       <div className="container-site flex items-center justify-between gap-6 py-4">
         <Logo />
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 lg:flex">
+          <ServicesNavItem
+            open={servicesOpen}
+            onOpen={() => setServicesOpen(true)}
+          />
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -67,10 +79,16 @@ export default function Navbar() {
         </button>
       </div>
 
+      <ServicesPopover
+        open={servicesOpen}
+        onClose={() => setServicesOpen(false)}
+      />
+
       {/* Mobile nav */}
       {menuOpen && (
         <nav className="container-site border-t border-white/10 pb-6 pt-2 lg:hidden">
           <ul className="flex flex-col gap-1">
+            <ServicesMobileSection onNavigate={() => setMenuOpen(false)} />
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
