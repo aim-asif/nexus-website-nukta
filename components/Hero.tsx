@@ -34,7 +34,7 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-dark text-white">
       {/* Hero image — full-bleed and dimmed on mobile, right 3/5 at full strength on md+ */}
       <div
-        className="absolute inset-0 bg-neutral-900 bg-[url('/images/hero_img.png')] bg-cover bg-center opacity-20 md:left-auto md:w-3/5 md:opacity-100"
+        className="absolute inset-0 bg-neutral-900 bg-[url('/images/hero_img.jpg')] bg-cover bg-center opacity-20 md:left-auto md:w-3/5 md:opacity-100"
         aria-hidden="true"
       />
       {/* Fade the image into the dark left side */}

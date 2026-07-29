@@ -11,6 +11,9 @@ export default function Logo() {
         height={43}
         priority
       />
+      <span className="mt-1.5 text-[0.6rem] font-light uppercase tracking-[0.32em] text-neutral-200">
+        Property Maintenance
+      </span>
     </Link>
   );
 }
