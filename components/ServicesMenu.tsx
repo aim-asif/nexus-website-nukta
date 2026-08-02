@@ -17,7 +17,7 @@ const iconProps = {
 export const servicesMenuItems = [
   {
     label: "Flooring",
-    href: "/services#flooring",
+    href: "/services/flooring",
     icon: (
       <svg {...iconProps}>
         <rect x="5" y="8" width="22" height="4" rx="0.5" />

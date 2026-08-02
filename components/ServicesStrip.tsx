@@ -24,7 +24,7 @@ const services: Service[] = [
   {
     title: "Flooring",
     description: "Supply & fit all floor types",
-    href: "/services#flooring",
+    href: "/services/flooring",
     icon: (
       <svg {...iconProps}>
         <rect x="5" y="8" width="22" height="4" rx="0.5" />
